@@ -4,14 +4,14 @@ Markdown
 An end-to-end strategic procurement analytics project modeling enterprise spend behaviors, quantifying maverick buying leakages, and establishing a targeted value-capture roadmap across 4 global operating units.
 
 ![Dashboard Preview](dashboard_preview.png)
-Executive Summary
+**Executive Summary**
 Baseline Spend: €101.63M analyzed across 325 distinct suppliers.
 
 Maverick Buying Rate: 10.97% (€11.15M) non-compliant, uncontracted spend.
 
 Identified Value Capture: €780.68k in direct addressable bottom-line savings via supplier consolidation and frame contract standardization (7% renegotiation hurdle).
 
-Business Problem & Context
+**Business Problem & Context**
 Large-scale decentralized procurement organizations frequently suffer from:
 
 Maverick Buying: Business units bypassing master service agreements (MSAs), exposing the enterprise to higher spot-market rates.
@@ -28,12 +28,12 @@ Modeled spend magnitude using an exponential distribution to reflect realistic e
 
 Script: generate_data.py
 
-2. Data Engineering & Transformation (Power Query)
+**2. Data Engineering & Transformation (Power Query)**
 Enforced strict locale data typing (US decimal encoding vs. EU currency formatting).
 
 Handled null values, standardized category taxonomies, and built relational integrity for reporting.
 
-3. Metric Architecture (DAX)
+**3. Metric Architecture (DAX)**
 Total Spend: SUM(procurement_spend_data_2025[Spend_EUR])
 
 Active Suppliers: DISTINCTCOUNT(procurement_spend_data_2025[Supplier_Name])
@@ -44,21 +44,21 @@ Maverick %: Safe ratio calculation using DIVIDE([Maverick Spend], [Total Spend],
 
 Identified Savings: Value capture calculation benchmarked at a 7% negotiated discount uplift.
 
-4. Visual Cockpit Design (Power BI)
+**4. Visual Cockpit Design (Power BI)**
 High-contrast, executive container layout adhering to modern BI design systems.
 
 Cross-filtering slicers enabling regional drill-downs by Business_Unit and Contract_Status.
 
 100% stacked category compliance analysis exposing non-compliant spend drivers.
 
-Strategic Recommendations
+**Strategic Recommendations**
 Immediate (0–90 days): Enforce hard approval gates in ERP/P2P systems for uncontracted purchase orders in Logistics & Freight and IT & Software.
 
 Consolidation Wave (3–6 months): Aggregate tail vendors into regional preferred supplier lists (PSLs) via competitive sourcing events.
 
 Governance: Deploy automated weekly Power BI refreshes to flag invoice variance prior to finance sign-off.
 
-Repository Structure
+**Repository Structure**
 generate_data.py – Python data generation script
 
 procurement_spend_data_2025.csv – Synthetic spend dataset
