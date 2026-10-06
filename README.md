@@ -21,7 +21,7 @@ Tail Spend Inefficiencies: Excessive volume of small-ticket suppliers driving up
 Data Silos: Lack of automated cross-category visibility into compliance and category distribution.
 
 Technical Architecture & Methodology
-1. Data Generation & Distribution Modeling (Python)
+**1. Data Generation & Distribution Modeling (Python)**
 Generated a transactional dataset of 5,000 line items via numpy and pandas.
 
 Modeled spend magnitude using an exponential distribution to reflect realistic enterprise Pareto dynamics (top 10% suppliers capturing ~70% spend).
